@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mango {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: relative;
+            border-radius: 50%;
+            transform: rotate(450deg);
+            overflow: hidden;
+            animation: inner 2s linear 2s infinite;
+        }
+
+        .con {
+            height: 400px;
+            width: 700px;
+            background-color: aqua;
+            position: absolute;
+            left: 180px;
+            top: 150px;
+            border-top-left-radius: 320px;
+            border-top-right-radius: 320px;
+            border-bottom-left-radius: 320px;
+            border-bottom-right-radius: 320px;
+            animation: outer 2s linear 2s infinite;
+            overflow: hidden;
+
+        }
+
+        @keyframes inner {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                left: 450px;
+                top: 0px;
+            }
+
+            50% {
+
+                top: 300px;
+                right: 0px;
+            }
+
+            75% {
+                left: 0px;
+                right: 420px;
+                bottom: 0px;
+
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+
+        }
+
+        @keyframes outer {
+
+            0% {
+                left: 180px;
+                top: 150px;
+            }
+
+            50% {
+                top: 200px;
+            }
+
+            100% {
+                left: 180px;
+                top: 150px;
+            }
+
+        }
+
+        img {
+            position: relative;
+            bottom: 260px;
+            left: 450px;
+            overflow: hidden;
+            animation: image 2s linear 2s infinite;
+        }
+
+        @keyframes image {
+            0% {
+                bottom: 260px;
+                left: 450px;
+            }
+            50%{
+                left: 490px;
+            }
+            100%{
+                left: 450px;
+            }
+        }
+        body{
+            background-color:rgb(139, 139, 225);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="mango"></div>
+        <img src="tom-removebg-preview.png" alt="">
+    </div>
+</body>
+
+</html>
